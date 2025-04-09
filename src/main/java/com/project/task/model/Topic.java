@@ -1,11 +1,11 @@
 package com.project.task.model;
 
 import lombok.Data;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Data
 public class Topic {
     private String name;
-    private List<Vote> votes = new ArrayList<>();
+    private Map<String, Vote> votes = new ConcurrentHashMap<>();
 }
